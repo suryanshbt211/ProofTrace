@@ -126,7 +126,7 @@ Enable test mode and run the test suite to validate:
 
 ---
 
-## 🌍 Live Demo Flow (What Judges See)
+## 🌍 Live Demo Flow
 
 1. Paste rules  
 2. Paste text  
