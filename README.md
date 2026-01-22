@@ -140,3 +140,34 @@ Instantly see:
 Live demo:  
 https://huggingface.co/spaces/Suryansht21103/prooftrace
 
+## 🛠️ Built With
+
+### Languages
+- **Python 3.13** — core implementation and deterministic verification layer
+
+### AI & APIs
+- **Google Gemini 3 (Gemini API)** — natural-language rule interpretation and reasoning
+- **Gemini Flash** — lightweight reasoning for fast rule evaluation
+
+### Frameworks & Libraries
+- **Gradio** — minimal interactive frontend for public demonstration
+- **pytest** — deterministic test suite for validation and replay logic
+- **python-dotenv** — environment variable management
+- **Pydantic** — structured data models for decision proofs
+
+### Platforms
+- **Hugging Face Spaces** — public interactive demo hosting
+- **Local Python Runtime** — development and testing environment
+
+### Architecture & Concepts
+- **Hybrid AI + Deterministic Verification**
+- **Replayable AI Decision Artifacts**
+- **Anti-Hallucination Evidence Verification**
+- **Semantic Diffing of AI Decisions**
+- **AI Governance & Accountability Design**
+
+### Tooling
+- **Git** — version control
+- **VS Code** — development environment
+
+
