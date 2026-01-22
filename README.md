@@ -78,7 +78,8 @@ Decision proofs can be queried like data:
 
 git clone https://github.com/suryanshbt211/prooftrace.git
 cd prooftrace
-###2️⃣ Create .env File (REQUIRED)
+
+**###2️⃣ Create .env File (REQUIRED)**
 Create a file named .env in the ROOT of the project directory
 (the same level where app.py and the app/ folder exist).
 
