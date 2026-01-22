@@ -75,7 +75,7 @@ Decision proofs can be queried like data:
 
 ### 1️⃣ Clone the Repository
 
-```bash
+
 git clone https://github.com/suryanshbt211/prooftrace.git
 cd prooftrace
 2️⃣ Create .env File (REQUIRED)
