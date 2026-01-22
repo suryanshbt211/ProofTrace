@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+prooftrace.egg-info/PKG-INFO
+prooftrace.egg-info/SOURCES.txt
+prooftrace.egg-info/dependency_links.txt
+prooftrace.egg-info/requires.txt
+prooftrace.egg-info/top_level.txt
