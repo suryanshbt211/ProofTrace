@@ -1,43 +1,3 @@
-Good catch — this is a **Markdown nesting issue**, not your fault.
-
-### ❗ Why it happened
-
-Inside your **big code block**, you have **other triple-backtick blocks** like:
-
-````md
-```bash
-...
-````
-
-```env
-...
-```
-
-````
-
-Markdown **does not allow nested triple-backticks** of the same type.  
-So when the renderer sees the inner ```bash or ```env, it **closes the outer block early**, which makes the **last 1–2 sections appear outside** the copied code segment.
-
-That’s why you’re seeing “2 things below” rendered outside.
-
----
-
-### ✅ The Fix (Correct + Safe)
-
-When you want **ONE giant copy-paste block**, you must:
-
-- Use **tildes `~~~` for the outer block**
-- Keep **``` inside** for code examples
-
-This is the **correct, render-safe version**.
-
----
-
-## ✅ **FINAL — SINGLE COPY-PASTE BLOCK (100% SAFE)**
-
-Paste **this entire thing as-is** 👇
-
-~~~md
 🔗 **Live Interactive Demo (Hugging Face Space)**  
 https://huggingface.co/spaces/Suryansht21103/prooftrace
 
@@ -118,111 +78,88 @@ Decision proofs can be queried like data:
 ```bash
 git clone https://github.com/suryanshbt211/prooftrace.git
 cd prooftrace
-````
-
-### 2️⃣ Create `.env` File (**REQUIRED**)
-
-Create a file named `.env` in the **ROOT** of the project directory
-(the same level where `app.py` and the `app/` folder exist).
+2️⃣ Create .env File (REQUIRED)
+Create a file named .env in the ROOT of the project directory
+(the same level where app.py and the app/ folder exist).
 
 The file must contain:
 
-```env
 GEMINI_API_KEY=your_gemini_api_key_here
-```
-
 ⚠️ Notes:
 
-* Do **NOT** place `.env` inside the `app/` folder
-* Do **NOT** commit `.env` to GitHub
-* The application automatically reads this file at runtime
+Do NOT place .env inside the app/ folder
 
----
+Do NOT commit .env to GitHub
 
-### 3️⃣ Install Dependencies
+The application automatically reads this file at runtime
 
-```bash
+3️⃣ Install Dependencies
 pip install -r requirements.txt
-```
-
----
-
-### 4️⃣ Run the Interactive App
-
-```bash
+4️⃣ Run the Interactive App
 python app.py
-```
-
 The application will be available at:
 
-```
 http://localhost:7860
-```
+5️⃣ Run Deterministic Tests (No API Usage)
+ProofTrace supports a deterministic test mode:
 
----
-
-### 5️⃣ Run Deterministic Tests (No API Usage)
-
-```bash
 PROOFTRACE_TEST_MODE=1 pytest
-```
-
 This validates:
 
-* rule parsing
-* validation logic
-* replay behavior
-* PQL queries
-* anti-hallucination detection
+rule parsing
 
----
+validation logic
 
-## 🌍 Live Demo Flow (What Judges See)
+replay behavior
 
-1. Paste rules
-2. Paste text
-3. Click **Run ProofTrace**
+PQL queries
+
+anti-hallucination detection
+
+🌍 Live Demo Flow (What Judges See)
+Paste rules
+
+Paste text
+
+Click Run ProofTrace
 
 Instantly see:
 
-* full decision proof (raw JSON)
-* failed rules via PQL
-* quoted & verified evidence
+full decision proof (raw JSON)
 
-🔗 [https://huggingface.co/spaces/Suryansht21103/prooftrace](https://huggingface.co/spaces/Suryansht21103/prooftrace)
+failed rules via PQL
 
----
+quoted & verified evidence
 
-## 📈 Real-World Use Cases
+🔗 https://huggingface.co/spaces/Suryansht21103/prooftrace
 
-* AI compliance & governance
-* Education & grading audits
-* Enterprise policy enforcement
-* Content moderation verification
-* Model evaluation & debugging
-* Regulated AI deployments
+📈 Real-World Use Cases
+AI compliance & governance
 
----
+Education & grading audits
 
-## 💡 Why This Is Novel
+Enterprise policy enforcement
 
-ProofTrace is **not**:
+Content moderation verification
 
-* a chatbot
-* a prompt wrapper
-* a classifier
-* RAG
+Model evaluation & debugging
 
-It is **AI accountability infrastructure**.
+Regulated AI deployments
 
-Gemini is used as a **reasoning engine**, not a source of truth.
-All outputs are **verified, replayable, and auditable** by deterministic code.
+💡 Why This Is Novel
+ProofTrace is not:
 
-This combination does **not exist today as a usable product**.
+a chatbot
 
-```
+a prompt wrapper
 
----
+a classifier
 
+RAG
 
-```
+It is AI accountability infrastructure.
+
+Gemini is used as a reasoning engine, not a source of truth.
+All outputs are verified, replayable, and auditable by deterministic code.
+
+This combination does not exist today as a usable product.
