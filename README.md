@@ -78,7 +78,7 @@ Decision proofs can be queried like data:
 
 git clone https://github.com/suryanshbt211/prooftrace.git
 cd prooftrace
-2️⃣ Create .env File (REQUIRED)
+###2️⃣ Create .env File (REQUIRED)
 Create a file named .env in the ROOT of the project directory
 (the same level where app.py and the app/ folder exist).
 
@@ -93,14 +93,14 @@ Do NOT commit .env to GitHub
 
 The application automatically reads this file at runtime
 
-3️⃣ Install Dependencies
+###3️⃣ Install Dependencies
 pip install -r requirements.txt
-4️⃣ Run the Interactive App
+###4️⃣ Run the Interactive App
 python app.py
 The application will be available at:
 
 http://localhost:7860
-5️⃣ Run Deterministic Tests (No API Usage)
+###5️⃣ Run Deterministic Tests (No API Usage)
 ProofTrace supports a deterministic test mode:
 
 PROOFTRACE_TEST_MODE=1 pytest
