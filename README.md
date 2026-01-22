@@ -75,92 +75,68 @@ Decision proofs can be queried like data:
 
 ### 1️⃣ Clone the Repository
 
+Clone the ProofTrace repository from GitHub and navigate into the project directory.
 
-git clone https://github.com/suryanshbt211/prooftrace.git
-cd prooftrace
+Repository URL:  
+https://github.com/suryanshbt211/prooftrace.git
 
-**###2️⃣ Create .env File (REQUIRED)**
-Create a file named .env in the ROOT of the project directory
-(the same level where app.py and the app/ folder exist).
+---
 
-The file must contain:
+### 2️⃣ Create `.env` File (REQUIRED)
+
+Create a file named `.env` in the ROOT of the project directory  
+(the same level where `app.py` and the `app/` folder exist).
+
+The file must contain the following line:
 
 GEMINI_API_KEY=your_gemini_api_key_here
-⚠️ Notes:
 
-Do NOT place .env inside the app/ folder
+Important notes:
+- Do NOT place the `.env` file inside the `app/` folder
+- Do NOT commit the `.env` file to GitHub
+- The application automatically reads this file at runtime
 
-Do NOT commit .env to GitHub
+---
 
-The application automatically reads this file at runtime
+### 3️⃣ Install Dependencies
 
-###3️⃣ Install Dependencies
-pip install -r requirements.txt
-###4️⃣ Run the Interactive App
-python app.py
-The application will be available at:
+Install all required Python dependencies listed in the `requirements.txt` file.
 
+---
+
+### 4️⃣ Run the Interactive App
+
+Run the application using Python.
+
+After startup, the app will be available at:  
 http://localhost:7860
-###5️⃣ Run Deterministic Tests (No API Usage)
-ProofTrace supports a deterministic test mode:
 
-PROOFTRACE_TEST_MODE=1 pytest
-This validates:
+---
 
-rule parsing
+### 5️⃣ Run Deterministic Tests (No API Usage)
 
-validation logic
+ProofTrace supports a deterministic test mode that does not use the Gemini API.
 
-replay behavior
+Enable test mode and run the test suite to validate:
+- rule parsing
+- validation logic
+- replay behavior
+- PQL queries
+- anti-hallucination detection
 
-PQL queries
+---
 
-anti-hallucination detection
+## 🌍 Live Demo Flow (What Judges See)
 
-🌍 Live Demo Flow (What Judges See)
-Paste rules
-
-Paste text
-
-Click Run ProofTrace
+1. Paste rules  
+2. Paste text  
+3. Click **Run ProofTrace**
 
 Instantly see:
+- full decision proof (raw JSON)
+- failed rules via PQL
+- quoted and verified evidence
 
-full decision proof (raw JSON)
+Live demo:  
+https://huggingface.co/spaces/Suryansht21103/prooftrace
 
-failed rules via PQL
-
-quoted & verified evidence
-
-🔗 https://huggingface.co/spaces/Suryansht21103/prooftrace
-
-📈 Real-World Use Cases
-AI compliance & governance
-
-Education & grading audits
-
-Enterprise policy enforcement
-
-Content moderation verification
-
-Model evaluation & debugging
-
-Regulated AI deployments
-
-💡 Why This Is Novel
-ProofTrace is not:
-
-a chatbot
-
-a prompt wrapper
-
-a classifier
-
-RAG
-
-It is AI accountability infrastructure.
-
-Gemini is used as a reasoning engine, not a source of truth.
-All outputs are verified, replayable, and auditable by deterministic code.
-
-This combination does not exist today as a usable product.
